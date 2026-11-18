@@ -21,21 +21,21 @@ The dataset contains simulated one-minute chiller-plant operating data represent
 
 ├── README.md  
 ├── data/  
-   ├── raw/                    # LBNL CSV files (download; not tracked)  
+|   ├── raw/                    # LBNL CSV files (download; not tracked)  
 ├── notebooks/  
-   ├── 1_DataCleaning_Transformation.ipynb  
-   ├── 2_RawDataAssessment_.ipynb  
-   ├── 3_FeatureSelection_2.ipynb  
-   ├── 4_ExploratoryDataAnalysis.ipynb  
-   ├── 5_StatsVisualizations.ipynb  
-   ├── 6_Baseline2.ipynb  
-   ├── 7_Models.ipynb  
-   ├── 8_Hyperparameters.ipynb  
-   ├── 9_Test_Evaluation_Analysis.ipynb  
+|   ├── 1_DataCleaning_Transformation.ipynb  
+|   ├── 2_RawDataAssessment_.ipynb  
+|   ├── 3_FeatureSelection_2.ipynb  
+|   ├── 4_ExploratoryDataAnalysis.ipynb  
+|   ├── 5_StatsVisualizations.ipynb  
+|   ├── 6_Baseline2.ipynb  
+|   ├── 7_Models.ipynb  
+|   ├── 8_Hyperparameters.ipynb  
+|   ├── 9_Test_Evaluation_Analysis.ipynb  
 
 ## Python Version
 
-Python [3.X]. Two conda environments were used:
+Python 3.13.5. Two conda environments were used:
 *  ds: data preparation, exploratory analysis, and the Random Forest baseline
 *  torch: the LSTM and 1D-CNN (GPU, CUDA 12.6)
 
@@ -58,12 +58,12 @@ git clone https://github.com/bowfin/MADScapstone.git
 cd MADScapstone
 
 # 2. Environment for data preparation and the Random Forest baseline  
-conda create -n ds python=[3.X]  
+conda create -n ds python= 3.13.5  
 conda activate ds  
 pip install pandas numpy pyarrow scikit-learn matplotlib seaborn jupyter
 
 # 3. Environment for the sequence models (NVIDIA GPU, CUDA 12.6)  
-conda create -n torch python=[3.X]  
+conda create -n torch python= 3.13.5  
 conda activate torch  
 pip install torch --index-url https://download.pytorch.org/whl/cu126  
 pip install pandas numpy pyarrow scikit-learn matplotlib seaborn jupyter  
